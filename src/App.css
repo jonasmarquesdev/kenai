@@ -1,0 +1,19 @@
+#root {
+  margin: 0 auto;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  background-image: linear-gradient(transparent 0%, #0c0c0c 75%), url("./assets/background.png");
+  height: 1280px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
