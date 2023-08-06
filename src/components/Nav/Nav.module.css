@@ -1,0 +1,31 @@
+@import url("../../variables.css");
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px 10px 40px;
+}
+
+.navBar .logo {
+    font-size: 40px;
+    font-weight: 700;
+    background: var(--linear-rosa-laranja);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 0.5rem;
+    font-family: var(--fonte-principal);
+}
+
+.navBar ul {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+}
+
+.navBar ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--branco);
+}
