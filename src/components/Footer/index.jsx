@@ -2,12 +2,14 @@ import instagram from "../../assets/instagram.svg";
 import twitter from "../../assets/twitter.svg";
 import facebook from "../../assets/facebook.svg";
 
+import Logo from "../Logo";
+
 import styles from "./Footer.module.css";
 
 export default function Footer() {
     return(
         <footer className={styles.footer}>
-            <h1 className={styles.footer__logo}>Kenai</h1>
+            <Logo />
             <ul>
                 <li>
                     <img src={instagram} alt="" />

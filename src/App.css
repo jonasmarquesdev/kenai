@@ -8,14 +8,3 @@
   padding: 0;
   margin: 0;
 }
-
-.background {
-  background-image: linear-gradient(transparent 0%, #0c0c0c 75%),
-                    linear-gradient(270deg, #1D1D1D 0%, rgba(29, 29, 29, 0.00) 100%),
-                    url("./assets/background.png");
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}

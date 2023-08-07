@@ -1,17 +1,27 @@
+import { useNavigate } from "react-router-dom";
+
 import searchLogo from "../../assets/search.svg";
 import bellLogo from "../../assets/bell.svg";
 import userLogo from "../../assets/user.svg";
-import styles from "./Nav.module.css"
+
+import styles from "./Nav.module.css";
+
+import Logo from "../Logo";
 
 export default function Nav() {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/');
+    };
+
     return(
         <nav className={styles.navBar}>
-            <h1 className={styles.logo}>Kenai</h1>
+            <Logo cor="laranja" />
             <ul>
                 <li>
                     <img src={searchLogo} alt="" />
                 </li>
-                <li>
+                <li onClick={handleClick}>
                     <a href="">Inicio</a>
                 </li>
                 <li>
@@ -20,7 +30,7 @@ export default function Nav() {
                 <li>
                     <img src={bellLogo} alt="" />
                 </li>
-                <li>
+                <li onClick={handleClick}>
                     <img src={userLogo} alt="" />
                 </li>
             </ul>

@@ -1,0 +1,105 @@
+@import url("../../variables.css");
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px 10px 40px;
+}
+
+.navBar span {
+    display: flex;
+    gap: 5rem;
+}
+
+.navBar span {
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+}
+
+.container__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 63px 0 209px 0;
+}
+
+.container__box_usuarios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 63px 0 138px 0;
+}
+
+.container__box_titulo {
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+}
+
+.container__box_subtitulo {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+}
+
+.container__box_usuarios ul {
+    list-style: none;
+    display: flex;
+    gap: 8em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container__box_usuarios ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 2.5em
+}
+
+.container__box_usuarios ul .avatar {
+    width: 176px;
+    height: 176px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.container__box_usuarios ul .username {
+    font-family: var(--fonte-secundaria);
+    font-size: 32px;
+    color: var(--cinza);
+    font-weight: 400;
+}
+
+.container__botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__botao .botao {
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 40px 16px 40px;
+    color: var(--branco);
+    background: var(--preto);
+    border: none;
+    margin-bottom: 80px;
+}

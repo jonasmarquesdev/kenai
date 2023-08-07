@@ -1,18 +1,18 @@
 import './App.css';
 
-import Nav from "./components/Nav";
-import Banner from "./components/Banner";
-import Populares from './components/Populares';
-import Footer from './components/Footer';
+import Home from './pages/home';
+import Loading from './pages/loading';
+import Login from './pages/login';
+import AppRouter from './routes';
 
 function App() {
   return (
-    <div className="background">
-      <Nav />
-      <Banner />
-      <Populares />
-      <Footer />
-    </div>
+    <>
+      {/* <Home /> */}
+      {/* <Loading /> */}
+      {/* <Login /> */}
+      <AppRouter />
+    </>
   );
 }
 

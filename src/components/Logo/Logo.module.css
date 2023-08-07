@@ -1,0 +1,20 @@
+@import url("../../variables.css");
+
+.logoLaranja {
+    font-size: 40px;
+    font-weight: 700;
+    background: var(--linear-rosa-laranja);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 0.5rem;
+    font-family: var(--fonte-principal);
+}
+
+.logoBranca {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--branco);
+    margin-left: 0.5rem;
+    font-family: var(--fonte-principal);
+}
