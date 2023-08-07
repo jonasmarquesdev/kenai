@@ -1,0 +1,21 @@
+@import url("../../variables.css");
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 40px 40px 40px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+}
+
+.footer__logo {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--branco);
+    margin-left: 0.5rem;
+    font-family: var(--fonte-principal);
+}

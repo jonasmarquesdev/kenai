@@ -7,7 +7,7 @@ export default function Nav() {
     return(
         <nav className={styles.navBar}>
             <h1 className={styles.logo}>Kenai</h1>
-            <ul className="">
+            <ul>
                 <li>
                     <img src={searchLogo} alt="" />
                 </li>

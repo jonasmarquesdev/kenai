@@ -3,6 +3,7 @@ import './App.css';
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Populares from './components/Populares';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Nav />
       <Banner />
       <Populares />
+      <Footer />
     </div>
   );
 }
