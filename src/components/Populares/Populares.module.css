@@ -1,0 +1,26 @@
+.container__populares {
+    display: flex;
+    flex-direction: column;
+}
+
+.populares__containerTitulo {
+    border-bottom: 2px var(--laranja) solid;
+    width: 4%;
+    padding-bottom: 4px;
+    margin-left: 3rem;
+}
+
+.populares__containerTitulo h2 {
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.populares__lista {
+    display: flex;
+    gap: 71px;
+    margin-top: 70px;
+    margin-left: 3rem;
+    padding-right: 3em;
+}
