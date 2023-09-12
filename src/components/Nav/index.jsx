@@ -21,13 +21,13 @@ export default function Nav() {
                 <li>
                     <img src={searchLogo} alt="" />
                 </li>
-                <li onClick={handleClick}>
+                <li className={styles.home} onClick={handleClick}>
                     <a href="">Inicio</a>
                 </li>
-                <li>
+                <li className={styles.mylist}>
                     <a href="">Minha lista</a>
                 </li>
-                <li>
+                <li className={styles.bell}>
                     <img src={bellLogo} alt="" />
                 </li>
                 <li onClick={handleClick}>

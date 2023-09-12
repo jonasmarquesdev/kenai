@@ -19,3 +19,10 @@
     margin-left: 0.5rem;
     font-family: var(--fonte-principal);
 }
+
+@media (max-width: 991px) {
+    .footer ul {
+        gap: 1rem;
+        align-items: center;
+    }
+}

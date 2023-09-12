@@ -19,8 +19,18 @@
 
 .populares__lista {
     display: flex;
-    gap: 71px;
+    gap: 20px;
     margin-top: 70px;
     margin-left: 3rem;
     padding-right: 3em;
+}
+
+@media (max-width: 991px) {
+    .populares__lista {
+        padding-right: 0;
+        width: 1080px;
+    }
+    .slider_container {
+        width: 100%;
+    }
 }

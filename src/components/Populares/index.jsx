@@ -2,18 +2,64 @@ import Card from "../Card";
 import imagens from "../../utils/imagens.js";
 
 import styles from "./Populares.module.css";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Populares() {
+    const carousel = useRef();
+    const [CurrentWidth, setCurrentWidth] = useState(window.innerWidth);
+    const [calWidth, setCalWidth] = useState(0);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setCurrentWidth(window.innerWidth);
+            // Recalcule a largura do conteúdo aqui
+            const newCalWidth = carousel.current?.scrollWidth - carousel.current?.offsetWidth;
+            setCalWidth(newCalWidth);
+        };
+        
+        window.addEventListener('resize', handleResize);
+        // Inicialize a largura do conteúdo quando o componente for montado
+        const initialCalWidth = carousel.current?.scrollWidth - carousel.current?.offsetWidth;
+        setCalWidth(initialCalWidth);
+
+        console.log("carousel.current:", carousel.current);
+        console.log("scrollWidth:", carousel.current?.scrollWidth);
+        console.log("offsetWidth:", carousel.current?.offsetWidth);
+        console.log("calWidth:", calWidth);
+    
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    
+
     return(
-        <div className={styles.container__populares}>
+        <motion.div ref={carousel} className={styles.container__populares}>
             <div className={styles.populares__containerTitulo}>
                 <h2>Populares</h2>
             </div>
-            <div className={styles.populares__lista}>
-                {imagens.map((image, index) => (
-                    <Card key={index} nome={image.name} imagem={image.url} />
-                ))}
-            </div>
-        </div>
+            {CurrentWidth > 991 ? (
+                <div className={styles.populares__lista}>
+                    {imagens.map((image, index) => (
+                        <Card key={index} nome={image.name} imagem={image.url} />
+                    ))}
+                </div>
+            ) : (
+                <motion.div
+                    className={styles.slider_container}
+                    whileTap={{ cursor: "grabbing" }}
+                >
+                    <motion.div
+                        className={styles.populares__lista}
+                        drag="x"
+                        dragConstraints={{ right: 0, left: -calWidth}}
+                        
+                    >
+                        {imagens.map((image, index) => (
+                            <Card key={index} nome={image.name} imagem={image.url} />
+                        ))}
+                    </motion.div>
+                </motion.div>
+            )}
+        </motion.div>
     );
 }

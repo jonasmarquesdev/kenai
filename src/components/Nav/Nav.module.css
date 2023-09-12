@@ -18,3 +18,22 @@
     font-size: 24px;
     color: var(--branco);
 }
+
+@media (max-width: 991px) {
+    .navBar ul {
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .navBar ul li a {
+        font-size: 12px;
+    }
+
+    .navBar ul li img {
+        width: 20px;
+    }
+
+    .home, .mylist, .bell {
+        display: none;
+    }
+}
