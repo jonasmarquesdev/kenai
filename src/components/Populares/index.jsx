@@ -22,11 +22,6 @@ export default function Populares() {
         // Inicialize a largura do conteúdo quando o componente for montado
         const initialCalWidth = carousel.current?.scrollWidth - carousel.current?.offsetWidth;
         setCalWidth(initialCalWidth);
-
-        console.log("carousel.current:", carousel.current);
-        console.log("scrollWidth:", carousel.current?.scrollWidth);
-        console.log("offsetWidth:", carousel.current?.offsetWidth);
-        console.log("calWidth:", calWidth);
     
         return () => window.removeEventListener('resize', handleResize);
     }, []);
