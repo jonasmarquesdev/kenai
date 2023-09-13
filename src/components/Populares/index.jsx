@@ -13,13 +13,11 @@ export default function Populares() {
     useEffect(() => {
         const handleResize = () => {
             setCurrentWidth(window.innerWidth);
-            // Recalcule a largura do conteúdo aqui
             const newCalWidth = carousel.current?.scrollWidth - carousel.current?.offsetWidth;
             setCalWidth(newCalWidth);
         };
         
         window.addEventListener('resize', handleResize);
-        // Inicialize a largura do conteúdo quando o componente for montado
         const initialCalWidth = carousel.current?.scrollWidth - carousel.current?.offsetWidth;
         setCalWidth(initialCalWidth);
     
